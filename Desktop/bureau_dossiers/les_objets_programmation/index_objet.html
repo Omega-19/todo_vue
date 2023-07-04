@@ -1,0 +1,164 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Objets</title>
+</head>
+<body>
+    <script>
+        let obj = {
+            nom : "bob l'éponge",
+            action : function () {
+                console.log(this.nom + "joue");
+            }
+        }
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Object-oriented JavaScript example</title>
+</head>
+
+<body>
+    <article>
+        <h1><strong>JavaScript POO</strong></h1>
+        <p>La <strong>programmation Objet Orientée</strong> est un paradigme de programmation qui permet d'organiser et
+            de structurer le code en utilisant des concepts appelés objets.</p>
+        <p><strong>Un programme de programmation</strong> est une approche ou une méthode générale qui guide la façon
+            dont on structure et organise le code d'un programme.</p>
+        <p>Un <strong>objet</strong> représente un concept, une idée ou toute entité du monde physique, comme une
+            voiture, une personne ou encore une page d'un livre.</p>
+        <p>Une classe est un ensemble d'objet; les classes permettent de reduire les codes,tout en définissant une base
+            pour toutes les variables</p>
+    </article>
+    <article>
+        <h1><strong>LES MODULES</strong></h1>
+        <p>Ce sont un mécanisme de regroupement et d'organisation du code JavaScript</p>.
+        <p>Ils permettent de découper un programme en plusieurs fichiers, appelés <em>modules</em> qui peuvent être
+            réutilisés et importés dans d' autres fichiers.</p>
+        <p>Pour créer un module JavaScript, on utilise le mot-clé <strong><em>export</em></strong> pour déclarer les
+            éléments (fonctions, variables, classes) que vous souhaitez rendre accessibles à d'autres modules. Par
+            exemple:</p>
+        <code>
+            <pre>
+                // Dans un fichier nommé "module.js"
+
+                // Exporter une fonction 
+                export function maFonction()
+
+                // Code de la fonction
+
+                //Exporter une variable 
+                export const maVariable = 42;
+
+                //Exporter une classe 
+                export class Maclasse {
+                    //Code de la classe
+                }
+
+            </pre>
+        </code>
+        <p>Ensuite, dans un autre fichier, nous pouvons utiliser le mot-clé "<em><strong>import</strong></em> pour
+            importer les éléments exportés depuis le module :</p>
+
+        <pre>
+            <code>
+                // Dans un autre fichier 
+
+                // Importer une fonction 
+                import {maFonction } from './module.js';
+
+                //Importer une variable
+                import { maVariable } from './module.js';
+                
+                //Importer une classe
+                import { MaClasse } from './module.js';
+        </code>
+    </pre>
+    </article>
+    <script>
+
+
+        // la Syntaxe ES5 (Ecma Script 5 | Javascript 2009)
+        let person1 = {
+            firstname: "john",
+            lastname: "Doe",
+            courir: function () {
+                console.log("je cours 🛴 en 2009");//une fonction dans un objet est la méthode
+            }
+
+        };
+        person1.age = 45;
+
+        person1.courir(); //j'appelle ainsi la méthode
+        console.log(person1.age);
+        console.log(person1);
+
+
+        // la Syntaxe ES6 (Ecma Script 6 | Javascript 2015)
+        let person2 = {
+            firstname: "john",
+            lastname: "Doe",
+            courir() {
+                console.log("je cours 🛴🛴 pour 2015");//une fonction dans un objet est la méthode
+            }
+        };
+        person2.firstname = "Jacques";
+        // person2.fullname = function () {
+        //     return `On m'appelle ${person2.firstname} ${person2.lastname}`//ON PEUT AUSSI AJOUTER UNE FONCTION EN DEHORS DE L'OBJET
+        // }
+        // console.log(person2.fullname());
+        console.log(person2);
+        // person2.courir(); //j'appelle ainsi la méthode
+        // console.log(person2.firstname);
+
+        // définissons une classe(Les classes 2015 - ES6)
+
+        class Person {
+            courir() {
+                console.log("je cours 🛴 en 2009");//une fonction dans un objet est la méthode
+            }
+            fullname() {
+                return ` on m'appelle ${this.firstname} ${this.lastname}`
+            }
+        }
+        let toto = new Person();
+        console.log(toto);//chaque fois qu'on crée un objet dans une classe, en même temps cet objet reçois en héritage les paramètres préétablis dans la classe.
+
+        // document.addEventListener("DOMContentLoaded", function () {
+        //     const submit = document.querySelector("#soumettre");
+        //     const month = document.querySelector("#month");
+        //     class Request {
+        //         constructor(submit) {
+        //             this.submit = submit;
+        //             this.month = month;
+        //         }
+        //         getInputs() {
+        //             console.log(submit);
+        //         }
+        //     }
+        //     // récupère les valeurs du getInputs
+        //     let request = new Request();
+        //     // ...
+        //     request.getInputs(submit);
+//         function ModifChamp() {
+//             if (document.forms["form1"].checkbox.checked) {
+//                 document.forms["form1"].champ_text.value = 'Bouton 
+// coché' } 
+// else {
+//                     document.forms["form1"].champ_text.value = 'bouton 
+// non coché' } }
+        // });
+    </script>
+
+</body>
+
+</html>
