@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_03</title>
+    <style>
+        body{
+            max-width: 900px;
+            margin-inline: auto;
+        }
+        h2{
+            color: blue;
+            font-family: Arial;
+            font-size: 1rem;
+        }
+        ul{
+            background-color: rgb(147, 236, 237);
+            color: black;
+            margin-block: 1.5rem;
+            margin-inline: 2rem;
+            line-height: 1.5rem;
+        }
+    
+    </style>
+</head>
+<body>
+    <h2>1. Comment peut-on déplacer un élément dessiné dans un canvas ?</h2>
+<ul>
+    <li>En modifiant les propriétés de positionnement de cet élément sur le Canvas</li>
+    <li>En faisant glisser un doigt sur l'écran du PC</li>
+    <li>En utilisant la fonction CSS 'moveOnVector'</li>
+    <li>En supprimant l'élément sur le Canvas et en le redessinant à sa nouvelle position 🧭</li>
+</ul>
+
+<h2>2. Est-il possible de faire jouer une vidéo dans un Canvas</h2>
+<ul>
+    <li>Oui 🧭</li>
+    <li>Non</li>
+</ul>
+
+<h2>3. Que va faire ce code ?</h2>
+
+<em>
+    let ctx = document.querySelector("#canvas").getContext("2d");
+    ctx.beginPath();
+    ctx.lineWidth = "5";
+    ctx.strokeStyle = "red";
+    ctx.moveTo(10, 50);
+    ctx.lineTo(300, 50);
+    ctx.stroke();
+</em>
+<ul>
+    <li>Dessiner une ligne droite de couleur rouge et ayant 5 pixels d'épaisseur 🧭</li>
+    <li>Dessiner une ligne droite de couleur verte</li>
+    <li>Dessiner un rectangle de dimensions 300 x 50</li>
+    <li>Dessiner une ligne de 290 pixels d'épaisseur</li>
+</ul>
+
+<h2>4. Canvas doit-il nécessairement être utilisé dans tous les cas où nous avons une animation dans notre page HTML</h2>
+<ul>
+    <li>Oui</li>
+    <li>Non 🧭</li>
+</ul>
+
+<h2>5. Canvas permet-il de produire des images vectorielles et donc, par exemple, de zoomer sur une forme géométrique sans perte de qualité ?</h2>
+<ul>
+    <li>Oui</li>
+    <li>Non 🧭</li>
+</ul>
+
+<h2>6. Quelle technologie permet de gérer des effets 3D dans un Canvas ?</h2>
+<ul>
+    <li>Context3d</li>
+    <li>WebGL 🧭</li>
+    <li>Java3D</li>
+    <li>Unreal Engine</li>
+</ul>
+
+<h2>7. Considérons la création d'un jeu-vidéo dans une page HTML. Quelles affirmations sont exactes ?</h2>
+<ul>
+    <li>On doit impérativement utiliser Canvas</li>
+    <li>Il est possible d'utiliser Canvas, les balises SVG et même les balises HTML  🧭</li>
+    <li>Les pages HTML ne sont pas du tout adaptées à la conception de jeux-vidéos</li>
+</ul>
+
+<h2>8. Que va faire ce code ?</h2>
+
+<em>
+    let canvas = document.querySelector("#canvas");
+    let ctx = canvas.getContext("2d");
+    ctx.strokeStyle = "yellow";
+    ctx.fillRect(10, 10, 50, 100);
+</em>
+<ul>
+    <li>Rien: le dessin n'a pas été tracé avec "stroke" ou "fill" !</li>
+    <li>Dessiner un rectangle rempli de jaune de 50 x 100 pixels dans le Canvas</li>
+    <li>Dessiner un rectangle rempli de noir de 50 x 100 pixels dans le Canvas 🧭</li>
+    <li>Dessiner les contours noirs d'un carré de 50 par 100 pixels dans le Canvas</li>
+</ul>
+
+<h2>
+    9. Soit la fonction "refreshCanvas" suivante:
+    function refreshCanvas () {
+    console.log("Salut !");
+    }
+    <em>Comment assurer le rafraichissement du Canvas toutes les 60 images secondes environ ?</em>
+</h2>
+<ul>
+    <li>En utilisant la méthode "setInterval(refreshCanvas, 1000 / 60)" 🧭</li>
+    <li>En utilisant la méthode "requestAnimationFrame(refreshCanvas)" une seule fois</li>
+    <li>En utilisant la méthode "restore()" du context2D</li>
+</ul>
+
+<h2>10. Pourquoi l'utilisation de "requestAnimationFrame()" est-elle conseillée avec l'animation du Canvas</h2>
+<ul>
+    <li>Pour l'optimisation du rendu graphique en utilisant le GPU de l'ordinateur plutôt que le CPU 🧭</li>
+    <li>Car il n'est pas possible d'animer un Canvas autrement</li>
+</ul>
+
+<h2>11. Une fois un carré dessiné sur le Canvas, est-il possible de récupérer ses cordonnées ?</h2>
+<ul>
+    <li>Non ! C'est à moi de conserver ces coordonnées dans des variables en amont 🧭</li>
+    <li>Oui, en demandant au Context2D la position de l'objet, à condition de lui avoir donné un nom</li>
+</ul>
+
+<h2>12. Existe t-il une balise HTML "<canvas>" ?</h2>
+<ul>
+    <li>Oui 🧭</li>
+    <li>Non</li>
+</ul>
+
+<h2>13. Peut-on se servir du canvas pour créer un jeu vidéo ?</h2>
+<ul>
+    <li>Oui 🧭</li>
+    <li>Non</li>
+</ul>
+
+<h2>14. Qu'est-ce que le canvas ?</h2>
+<ul>
+    <li>Une zone graphique modifiable en JavaScript 🧭</li>
+    <li>Une sorte de div</li>
+    <li>L'équivalent JavaScript d'une "section" HTML</li>
+    <li>Un sélecteur CSS</li>
+</ul>
+
+<h2>15. Peut-on faire des animations 3D avec le canvas ?</h2>
+<ul>
+    <li>Oui 🧭</li>
+    <li>Non</li>
+</ul>
+
+<h2>16. Une seule de ces instructions est correcte. Laquelle ?</h2>
+<ul>
+    <li>canvas.getContext("3D");</li>
+    <li>canvas.getContext("2d"); 🧭</li>
+    <li>canvas.getContext("gl");</li>
+    <li>canvas.getContext("movie");</li>
+</ul>
+
+<h2>17. Considérons un carré dessiné dans le canvas. Comment changer sa couleur ?</h2>
+<ul>
+    <li>ctx.style.color = "#DDD";</li>
+    <li>ctx.fillStyle = "#DDD";</li>
+    <li>ctx.color = "#DDD";</li>
+    <li>ctx.backgroundColor = "#DDD";</li>
+    <li>Aucune réponse n'est satisfaisante 🧭</li>
+</ul>
+
+<h2>18. Quelle méthode permet de relier deux points du canvas ?</h2>
+<ul>
+    <li>lineTo(); 🧭</li>
+    <li>moveto();</li>
+    <li>GOTO;</li>
+    <li>getTo();</li>
+</ul>
+
+<h2>19. À quoi sert la méthode "beginPath()"</h2>
+<ul>
+    <li>À débuter un tracé 🧭</li>
+    <li>À rien</li>
+    <li>À dessiner une ligne droite</li>
+</ul>
+
+<h2>20. Peut-on écouter des événements dans un canvas</h2>
+<ul>
+    <li>Oui 🧭</li>
+    <li>Non</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="test.js"></script>
+    <style>
+        h2 {
+            color: rgb(2, 2, 135);
+            font-family: Arial;
+            font-size: 1rem;
+            font-weight: 800;
+        }
+
+        ul {
+            background-color: rgb(191, 251, 122);
+            color: black;
+            margin-block: 1.5rem;
+            margin-inline: 2rem;
+        }
+    </style>
+    <title>js_04</title>
+</head>
+
+<body>
+    Quiz_JS4
+
+    <h2>1. Qu'est-ce que le constructeur d'un classe ?</h2>
+
+    <ul>
+        <li>Une méthode appelée automatiquement à chaque fois qu'on accède à une propriété de la classe</li>
+        <li>Une méthode appelée automatiquement à l'instanciation de la classe 👨‍🎓</li>
+        <li>Une méthode appelée automatiquement à la destruction de la classe</li>
+        <li>Une méthode statique permettant d'instancier la classe sans le mot-clé "new"</li>
+    </ul>
+
+    <h2>2. «Java» est un diminutif du langage «JavaScript»</h2>
+    <ul>
+        <li>Vrai</li>
+        <li>Faux 👨‍🎓</li>
+    </ul>
+
+    <h2>3. Qu'affiche le code suivant dans la console ?</h2>
+
+    class User {
+    constructor (name) {
+
+    this.name = name;
+    }
+    get name() {
+
+    return this.name;
+    }
+    set name (name) {
+
+    this.name = name;
+    }
+    }
+
+    const user = new User("Alice");
+    console.log(user.name);
+    <ul>
+        <li>Alice</li>
+        <li>Undefined</li>
+        <li>null</li>
+        <li>Rien, il lève une erreur "RangeError" 👨‍🎓</li>
+    </ul>
+
+    <h2>4. La composition est une forme d'héritage</h2>
+    <ul>
+        <li>Vrai</li>
+        <li>Faux 👨‍🎓</li>
+    </ul>
+
+    <h2>5. Peut-on donner le nom que l'on souhaite au constructeur d'une classe ?</h2>
+    <ul>
+        <li>Oui</li>
+        <li>Non 👨‍🎓</li>
+    </ul>
+
+    <h2>6. Qu'est-ce qu'un «getter» ?</h2>
+    <ul>
+        <li>Un accesseur visant à lire à lire une propriété d'un objet 👨‍🎓</li>
+        <li>Un mutateur visant à modifier une propriété d'un objet</li>
+        <li>Un mot-clé visant à importer un module</li>
+        <li>Un mot-clé visant à exporter un module</li>
+    </ul>
+
+    <h2>7. Qu'est-ce qu'un «setter» ?</h2>
+    <ul>
+        <li>Un accesseur visant à lire une propriété d'un objet</li>
+        <li>Un mot-clé visant à exporter un module</li>
+        <li>Un mutateur visant à modifier une propriété d'un objet 👨‍🎓</li>
+        <li>Un mot-clé visant à importer un module</li>
+    </ul>
+
+    <h2>8. À quoi sert le mot-clé "extends"</h2>
+    <ul>
+        <li>À étendre un module pour l'inclure dans un fichier</li>
+        <li>À rien, "extends" n'est pas un mot-clé en JavaScript</li>
+        <li>À créer une classe enfant qui hérite d'une classe parente 👨‍🎓</li>
+        <li>À former un contrat entre une classe instanciable et son interface</li>
+    </ul>
+
+    <h2>9. Quelle syntaxe permet de diviser son JavaScript en modules ?</h2>
+    <ul>
+        <li>
+            script type="module" src="app.js">script  👨‍🎓
+        </li>
+        <li>
+            script type="import" src="app.js">/script>
+        </li>
+        <li>
+            script type="v-bind" src="app.js">/script>
+        </li>
+        <li>
+            script type="export" src="app.js">/script>
+        </li>
+    </ul>
+
+    <h2>10. Peut-on utiliser le mot-clé "extends" pour étendre la classe</h2> "Date"
+    <ul>
+        <li>Oui 👨‍🎓</li>
+        <li>Non</li>
+    </ul>
+
+    <h2>11. Le code ci-dessous est-il correct ?</h2>
+
+    class User {
+    constructor (firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    }
+    get fullName () {
+    return `${this.firstName} ${this.lastName}`;
+    }
+    }
+    <ul>
+        <li>Oui 👨‍🎓</li>
+        <li>Non</li>
+    </ul>
+
+    <h2>12. Qu'est-ce qu'un objet ?</h2>
+    <ul>
+        <li>Une instance reproductible d'un schéma UML</li>
+        <li>Une instance reproductible d'une classe 👨‍🎓</li>
+        <li>Une liste ordonné d'éléments de même type</li>
+        <li>Une liste ordonnée d'éléments de types différents</li>
+    </ul>
+
+    <h2>13. Qu'affiche le code suivant dans la console ?</h2>
+
+    class Dough {
+    constructor () {
+    this.flour = null;
+    this.water = null;
+    this.salt = null;
+    }
+    }
+
+    const dough = new Dough();
+    dough.flour = 250;
+    dough.water = 150;
+    dough.salt = 6;
+    console.log(dough.water);
+    <!-- on ne fait pas une réassignation d'un objet mais on peut redéfinir les propriétés d'un objet -->
+    <ul>
+        <li>250</li>
+        <li>150 👨‍🎓</li>
+        <li>6</li>
+        <li>Ce code lève une erreur "TypeError: Assignment to constant variable."</li>
+    </ul>
+
+    <h2>14. Qu'est-ce que la composition dans le contexte de la POO ?</h2>
+    <ul>
+        <li>Une classe enfant héritant d'une classe parente</li>
+        <li>La combinaison de plusieurs classes distinctes au sein d'une seule 👨‍🎓</li>
+        <li>La centralisation des lignes de force dans une photographie de chat</li>
+        <li>Une classe enfant héritant de plusieurs classes parentes</li>
+    </ul>
+
+    <h2>15. Quel dessein servent les accesseurs et les mutateurs d'une classe ?</h2>
+    <ul>
+        <li>L'héritage</li>
+        <li>L'encapsulation 👨‍🎓</li><!---comparable a la calculatrice qui qu'on appui sans connaitre le contenu-->
+        <li>La substitution de Liskov</li>
+        <li>La ségrégation des interfaces</li>
+    </ul>
+
+    <h2>16. Comment qualifier "jump" dans le code suivant:</h2>
+
+    <em>
+        class Ninja {
+        constructor() {
+        this.agilite = 100;
+        this.endurance = 75;
+        this.force = 75;
+        }
+        run() {
+        console.log("Je court");
+        }
+        jump() {
+        console.log("Je saute");
+        }
+        }
+    </em>
+    <ul>
+        <li>C'est une propriété</li>
+        <li>C'est une fonction</li>
+        <li>C'est une méthode 👨‍🎓</li>
+        <li>C'est une variable</li>
+    </ul>
+
+    <h2>17. Comment importe t-on une fonction d'un module JavaScript ?</h2>
+    <ul>
+        <li>use lowercase from "./string-utils.js";</li>
+        <li>extend lowercase from "./string-utils.js";</li>
+        <li>import lowercase from "./string-utils.js"; 👨‍🎓</li>
+        <li>export lowercase from "./string-utils.js";</li>
+    </ul>
+
+    <h2>18. Quelle langue devrait-on utiliser dans tout son code ?</h2>
+    <ul>
+        <li>Français</li>
+        <li>Russe</li>
+        <li>Chinois</li>
+        <li>Anglais 👨‍🎓</li>
+    </ul>
+
+    <h2>19. Quelle notation doit-on utiliser pour nommer les classes ?</h2>
+    <ul>
+        <li>camelCase</li>
+        <li>PascalCase 👨‍🎓</li>
+        <li>snake_case</li>
+        <li>kebab-case</li>
+    </ul>
+
+    <h2>20. Quelle est la meilleure méthode pour définir la taille du canvas ?</h2>
+    <ul>
+        <li>Directement dans les balises "canvas>" ou en JavaScript 👨‍🎓</li>
+        <li>En CSS</li>
+    </ul>
+</body>
+
+</html>

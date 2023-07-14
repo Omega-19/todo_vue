@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="todo.js"></script> -->
+    <title>TODOLIST</title>
+</head>
+
+<body>
+    <main>
+        <h1>todos</h1>
+        <i id="supp" class="fa fa-chevron-down"
+                    style="font-size: 1rem; color: black; margin-right: 1rem;"></i>
+        <div id="myDIV" class="header">
+            <input type="text" id="myInput" placeholder="What needs to be done ?">
+            <span onclick="newElement()" class="addBtn">Enter</span>
+        </div>
+        <ul id="myUL">
+
+        </ul>
+        <div class="flex">
+            <p id="clicka" class="active">All</p>
+            <p id="clickb" >Active</p>
+            <p id="clickc" >Completed</p>
+        </div>
+
+        <!-- <article>
+            <p id="action"><i class="fa fa-chevron-down"
+                    style="font-size: 1rem; color: black; margin-right: 1rem;"></i>what needs to be done?</p>
+        </article> -->
+        <script>
+            // Create a "close" button and append it to each list item
+            var myNodelist = document.getElementsByTagName("LI");
+            var verifie = document.getElementById("#supp");
+            var i;
+            for (i = 0; i < myNodelist.length; i++) {
+                var span = document.createElement("SPAN");
+                var txt = document.createTextNode("\u00D7");
+                span.className = "close";
+                span.appendChild(txt);
+                myNodelist[i].appendChild(span);
+            }
+
+            // verifie.addEventListener("click",function(ev){
+
+            // });
+
+            // Click on a close button to hide the current list item
+            var close = document.getElementsByClassName("close");
+            var i;
+            for (i = 0; i < close.length; i++) {
+                close[i].onclick = function () {
+                    var div = this.parentElement;
+                    div.style.display = "none";
+                }
+            }
+
+            // Add a "checked" symbol when clicking on a list item
+            var list = document.querySelector('ul');
+            list.addEventListener('click', function (ev) {
+                if (ev.target.tagName === 'LI') {
+                    ev.target.classList.toggle('checked');
+                }
+            }, false);
+
+
+            // Create a new list item when clicking on the "Add" button
+            function newElement() {
+                var li = document.createElement("li");
+                var inputValue = document.getElementById("myInput").value;
+                var t = document.createTextNode(inputValue);
+                li.appendChild(t);
+                if (inputValue === '') {
+                    alert("You must write something!");
+                } else {
+                    document.getElementById("myUL").appendChild(li);
+                }
+                document.getElementById("myInput").value = "";
+
+                var span = document.createElement("SPAN");
+                var txt = document.createTextNode("\u00D7");
+                span.className = "close";
+                span.appendChild(txt);
+                li.appendChild(span);
+
+                for (i = 0; i < close.length; i++) {
+                    close[i].onclick = function () {
+                        var div = this.parentElement;
+                        div.style.display = "none";
+                    }
+                }
+            }
+        </script>
+    </main>
+</body>
+
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>MY TODOLIST</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="text-center text-light my-4">
+            <h1 class="mb-4">Todo List</h1>
+            <form class="search">
+                <input type="text" class="form-control m-auto" name="search" placeholder="Search Todos..">
+            </form>
+        </header>
+
+        <ul class="list-group todos mx-auto text-light">
+            
+        </ul>
+
+        <form class="add text-center my-4">
+            <label class="text-light">Add a new todo...</label>
+            <input type="text" class="form-control m-auto" name="add" />
+        </form>
+    </div>
+    <script src="sandbox.js"></script>
+    <script>
+        $('input').click(function() {
+            console.log($(this).context.checked);
+            $(this).parent().toggleClass("selected");
+            //  console.log($(this))
+        });
+    </script>
+</body>
+
+</html> -->
